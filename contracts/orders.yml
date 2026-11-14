@@ -1,0 +1,12 @@
+source: raw.orders
+owner: equipe-data
+version: 1
+freshness_hours: 24
+columns:
+  order_id:    {type: VARCHAR,   nullable: false}
+  customer_id: {type: VARCHAR,   nullable: false}
+  product_id:  {type: VARCHAR,   nullable: false}
+  quantity:    {type: INTEGER,   nullable: false, min: 1}
+  amount:      {type: DOUBLE,    nullable: false, min: 0.01}
+  currency:    {type: VARCHAR,   nullable: false, allowed: [EUR, USD]}
+  created_at:  {type: TIMESTAMP, nullable: false}

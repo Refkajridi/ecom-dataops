@@ -1,0 +1,10 @@
+name: ecom
+version: "1.0"
+profile: ecom
+model-paths: ["models"]
+models:
+  ecom:
+    staging:
+      +materialized: view
+    marts:
+      +materialized: table

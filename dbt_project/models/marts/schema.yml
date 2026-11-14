@@ -1,0 +1,21 @@
+version: 2
+models:
+  - name: fct_orders
+    columns:
+      - name: order_id
+        tests: [unique, not_null]
+      - name: amount
+        tests: [not_null]
+      - name: amount_eur
+        tests: [not_null]
+      - name: currency
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["EUR", "USD"]
+      - name: product_id
+        tests:
+          - relationships:
+              arguments:
+                to: ref('stg_products')
+                field: product_id

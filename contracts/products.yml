@@ -1,0 +1,10 @@
+source: raw.products
+owner: equipe-data
+version: 1
+freshness_hours: 24
+columns:
+  product_id: {type: VARCHAR, nullable: false}
+  name:       {type: VARCHAR, nullable: false}
+  category:   {type: VARCHAR, nullable: false}
+  price:      {type: DOUBLE,  nullable: false, min: 0}
+  cost:       {type: DOUBLE,  nullable: false, min: 0}
